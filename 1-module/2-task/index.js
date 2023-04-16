@@ -10,7 +10,21 @@ function print(text) {
  * чтобы функция sayHello работала корректно
  */
 function isValid(name) {
-  // ваш код...
+  if (!name) {
+    return false;
+  }
+
+  // Проверяем, есть ли в имени пробелы
+  if (name.indexOf(" ") !== -1) {
+    return false;
+  }
+
+  // Проверяем, имеет ли имя длину меньше 4 символов
+  if (name.length < 4) {
+    return false;
+  }
+
+  return true;
 }
 
 function sayHello() {
